@@ -8,18 +8,23 @@ import java.util.List;
  *         Date: 7/26/12
  *         Time: 6:56 PM
  */
+//TODO add immutability
 public class Pair {
-    List<Lesson> pairContent;
+    List<Lesson> lessons;
 
     public Pair() {
-        pairContent = new ArrayList<Lesson>(4);
+        lessons = new ArrayList<Lesson>(4);
     }
 
     public void setLesson(String name, SubgroupFlag subgroupFlag, EvenOddFlag evenOddFlag) {
-        pairContent.add(new Lesson(name, subgroupFlag, evenOddFlag));
+        lessons.add(new Lesson(name, subgroupFlag, evenOddFlag));
     }
 
     public List<Lesson> getLessons() {
-        return pairContent;
+        return lessons;
+    }
+
+    public void setLessons(List<Lesson> lessons) {
+        this.lessons = lessons;
     }
 }
